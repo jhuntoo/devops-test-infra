@@ -7,9 +7,10 @@ if [ -f ./.bin/kubectl ]
 then
   echo 'skipping download of kubectl'
 else
-    echo 'downloading kubectl'
+  echo 'downloading kubectl'
+  mkdir -p .bin
   curl -sSL https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/$PLATFORM/amd64/kubectl -o ./.bin/kubectl
-  chmod +x ./.bin/kops
+  chmod +x ./.bin/kubectl
 fi
 
 
