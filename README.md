@@ -7,7 +7,8 @@ The example application has been built and pushed as a public image to Docker Hu
 ### What you'll need to run this
 1. AWS account
 2. AWS CLI with access configured to run with the default profile. Alternatively export AWS_PROFILE you'd prefer to use
-3. AWS Hosted Zone under which record sets can be created for accessing the k8s cluster. 
+3. s3 Bucket for kops to store its state.
+4. AWS Hosted Zone under which record sets can be created for accessing the k8s cluster. 
    
    E.g.
    Hosted Zone:     mysubdomain.example.com
