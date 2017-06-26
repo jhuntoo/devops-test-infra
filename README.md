@@ -28,9 +28,11 @@ test.example.com.	86399	IN	NS	ns-1770.awsdns-29.co.uk.
 test.example.com.	86399	IN	NS	ns-386.awsdns-48.com.
 test.example.com.	86399	IN	NS	ns-781.awsdns-33.net.
 ```
+Update `env.vars` with the hosted zone name (e.g. subdomain.example.com)
 
 ### s3 Bucket for Kops state 
 Kops requires an s3 bucket for storing state, create one and add it to the `KOPS_STATE_STORE` environment variable in `env.vars`.
+
 `aws s3api create-bucket --bucket <globally unique bucket name> --region eu-west-1`
 
 ### Spin Up
