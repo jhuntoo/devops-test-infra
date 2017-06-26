@@ -9,6 +9,7 @@ then
 else
     echo 'downloading kubectl'
   curl -sSL https://storage.googleapis.com/kubernetes-release/release/${KUBECTL_VERSION}/bin/$PLATFORM/amd64/kubectl -o ./.bin/kubectl
+  chmod +x ./.bin/kops
 fi
 
 
