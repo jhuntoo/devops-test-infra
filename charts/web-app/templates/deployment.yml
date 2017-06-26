@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web-app
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+      - image:  "{{ .Values.image }}"
+        name: web-app
+        imagePullPolicy: Always
+        ports:
+          - name: http
+            containerPort: 3000
+            protocol: TCP

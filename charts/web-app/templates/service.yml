@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: web-app
+  labels:
+      app: web-app
+  annotations:
+    dns.alpha.kubernetes.io/external: "web-app.{{ .Values.baseDomain }}"
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    name: http
+    targetPort: http
+  selector:
+    app: web-app
