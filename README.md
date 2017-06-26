@@ -14,6 +14,7 @@ The example application has been built and pushed as a public image to Docker Hu
    Hosted Zone:     mysubdomain.example.com
    Record Entries   k8s.mysubdomain.example.com
 4. Configure `env.vars`
+5. jq installed and on your PATH. (required during cluster tear down)
    
 ### DNS setup   
 
